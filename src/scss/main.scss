@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace
+}
+
+//import modules
+//normalize
+@import '../../node_modules/normalize.css/normalize.css';
+
+//home
+@import 'home/skin';
+@import 'home/skeleton';
+
+//navbar
+@import 'navbar/skin';
+@import 'navbar/skeleton';
+//logo
+@import 'logo/skin';
+@import 'logo/skeleton';
+//title
+@import 'titulo/skin';
+@import 'titulo/skeleton';

@@ -1,0 +1,25 @@
+.div-cont-logo{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    background-color: aquamarine;
+}
+
+.logo{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    //background-color: aquamarine;
+}
+
+.div-cont-title{
+    display: inline-block;
+    height: 60px;
+    box-sizing: content-box;
+}
+
+.titulo{
+    padding: 0;
+    font-size: 20px;
+}
