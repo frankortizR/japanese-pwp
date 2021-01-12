@@ -2,8 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Dubai'
 }
+
+$color1:#EBE5DA;
+$color2:#022E40;
+$color3:#227373;
+$color4:#D93B3B;
+$color5:#F27A5E;
+
 
 //import modules
 //normalize
@@ -16,9 +23,7 @@
 //navbar
 @import 'navbar/skin';
 @import 'navbar/skeleton';
-//logo
-@import 'logo/skin';
-@import 'logo/skeleton';
-//title
-@import 'titulo/skin';
-@import 'titulo/skeleton';
+
+//Cfooter
+@import 'Cfooter/skin';
+@import 'Cfooter/skeleton';

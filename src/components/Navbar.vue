@@ -1,25 +1,26 @@
 <template>
-    <div class="div-cont-nav">
-        <nav class="">
-            <Logo></Logo>
-            <div class="div-cont-title">
-            <h1 class="titulo">Rath-japanese practice</h1>
-            </div>
-            <DisplayOpt class="displayopt"></DisplayOpt>
-        </nav>
-    </div>
+  <div class="div-cont-nav">
+    <nav class="nav">
+      <div class="lado1">
+        <div class="div-cont-logo">
+          <img class="logo" src="../assets/img/Logo2.svg" alt="Logo" />
+        </div>
+        <div class="div-cont-title">
+          <h1 class="title">Hiragana practice</h1>
+        </div>
+      </div>
+      <div class="div-cont-displayopt">
+        <button class="displayopt-boton">B</button>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
 //imports
-import DisplayOpt from './DisplayOpt';
-import Logo from './Logo';
 
 export default {
-    name: 'Navbar',
-    components: {
-        DisplayOpt,
-        Logo
-    }
-}
+  name: "Navbar",
+  components: {},
+};
 </script>

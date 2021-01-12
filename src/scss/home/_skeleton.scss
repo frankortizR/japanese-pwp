@@ -1,5 +1,44 @@
-.div-cont-navbar{
-    height: 60px;
-    width: 100%;
-    display: flex;
+.home-div-cont-title{
+    display: block;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.home-div-cont-modelos{
+    padding-bottom: 20px;
+}
+
+.home-title{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modelos{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.home-modelo-head{
+    display: block;
+}
+
+.home-modelo-title{
+    display: inline;
+    font-size: 30px;
+}
+
+.home-modelo-related{
+    display: inline;
+    margin-left: 10%;
+    font-size: 20px;
+}
+
+.home-modelo-description{
+    font-size: 90%;
+}
+
+.home-div-cont-advertaisment{
+    height: 150px;
 }
