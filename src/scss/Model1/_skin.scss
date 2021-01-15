@@ -1,0 +1,51 @@
+.model1-div-cont-part1{
+    background-color: $color1;
+}
+
+.model1-div-cont-modelo1{
+    background: none;
+}
+
+.model1-text{
+    color: $color2;
+}
+.model1-text-description{
+    color: $color3;
+}
+//styles de parte de practica
+.model1-icono-play{
+    border-style: solid;
+    border-radius: 5px;
+    text-decoration: none;
+    border-color: $color2;
+    border-width: 2px;
+    background-color: $color1
+    
+}
+.model1-reproducir{
+    color: $color3;
+}
+
+.model1-boton-practica-conromaji{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color2;
+    font-size: 100%;
+    text-align: center;
+}
+
+.model1-texto-practica{
+    font-size: 100%;
+    color: $color3;
+}
+
+//style show answer
+.model1-texto-show{
+    border-color: $color3;
+    color: $color2;
+}
+
+.model1-boton-next{
+    border-color: $color3;
+}

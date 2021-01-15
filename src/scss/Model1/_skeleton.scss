@@ -1,0 +1,139 @@
+body{
+    background-color: $color1;
+}
+.model1-div-cont-part1{
+    padding-top: 40px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.model1-title{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modelos{
+    padding: 20px;
+}
+
+.model1-modelo-head{
+    display: block;
+}
+
+.model1-modelo-title{
+    display: inline;
+    font-size: 30px;
+}
+
+.model1-modelo-related{
+    display: inline;
+    margin-left: 10%;
+    font-size: 20px;
+}
+
+.moidel1-modelo-description{
+    font-size: 90%;
+}
+
+.model1-div-cont-separator{
+    width: 80%;
+    margin: auto;
+}
+
+.model1-separator{
+    height: 0.5px;
+    background-color: $color2;
+}
+
+//estilos de practica
+
+.model1-div-cont-practice{
+    padding: 20px;
+}
+
+.model1-div-cont-play{
+    display: flex;
+    justify-content: center;
+}
+
+.model1-icono-play{
+    text-align: center;
+    height: 20px;
+    width: 30px;
+    
+}
+
+.model1-reproducir{
+    margin-left: 3%;
+}
+
+.model1-div-cont-practica-conromaji{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.model1-boton-practica-conromaji{
+    height: 30px;
+    width: 150px;
+    padding-top: 5px;
+}
+
+.model1-texto-practica{
+    margin-top: 5px;
+    height: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+//style show answer
+.model1-div-cont-answer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.model1-div-cont-show{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.model1-texto-show{
+    border-style: solid;
+    border-radius: 5px;
+    height: 30px;
+    width: 160px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.model1-icono-show{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.model1-boton-next{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    width: 60px;
+    height: 35px;
+}
+
+.model1-boton-next-text{
+    font-size: 20px;
+    color: $color2;
+    padding-top: 5px;
+    font-weight: bold;
+}
