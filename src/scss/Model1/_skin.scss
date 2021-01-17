@@ -30,14 +30,18 @@
     border-style: solid;
     border-radius: 5px;
     border-width: 2px;
-    border-color: $color2;
-    font-size: 100%;
+    border-color: $color3;
     text-align: center;
 }
 
 .model1-texto-practica{
     font-size: 100%;
     color: $color3;
+}
+
+.pressed{
+    background-color: $color5;
+    color: $color1;
 }
 
 //style show answer

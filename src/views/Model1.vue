@@ -1,7 +1,7 @@
 <template>
   <Navbar></Navbar>
   <div class="model1-div-cont-part1">
-    <div class="model1-div-cont-modelo1 modelos">
+    <div class="model1-div-cont-modelo1 modelosm">
       <div class="model1-modelo-head">
         <h3 class="model1-modelo-title model1-text">Modelo 1</h3>
         <p class="model1-modelo-related model1-text">Sonido y Romaji</p>
@@ -21,7 +21,7 @@
         <h3 class="model1-reproducir">Reproducir pronunciacion</h3>
       </div>
       <div class="model1-div-cont-practica-conromaji">
-        <div class="model1-boton-practica-conromaji" v-on:click="pRomaji">
+        <div :class="'model1-boton-practica-conromaji ' + this.empty" v-on:click="pRomaji">
           Practicar con Romaji
         </div>
         <div class="model1-div-cont-practica">
@@ -79,6 +79,8 @@ export default {
       showRs: "",
       showAd: "hide",
       showAs: "",
+      pressed: "pressed",
+      empty: "",
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),
@@ -248,6 +250,9 @@ export default {
       this.showRs = this.showRd;
       this.showRd = aux;
       console.log(this.showRs);
+      aux = this.pressed;
+      this.pressed = this.empty;
+      this.empty = aux;
     },
     asignIndex() {
       this.player.src = this.hiraganaS[this.index];
