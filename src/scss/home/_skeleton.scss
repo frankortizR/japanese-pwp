@@ -26,7 +26,11 @@
     margin: 20px;
     padding: 20px;
     border-radius: 30px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.modelos:hover{
+    transform: scale(1.01);
 }
 
 .home-modelo-head{
@@ -50,10 +54,6 @@
 
 .home-div-cont-advertaisment{
     height: 150px;
-}
-
-.modelos:hover{
-    transform: scale(1.01);
 }
 
 .link-pagina{

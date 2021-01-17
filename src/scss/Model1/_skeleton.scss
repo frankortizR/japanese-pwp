@@ -15,8 +15,12 @@ body{
     padding-bottom: 10px;
 }
 
-.modelos{
+.modelosm{
     padding: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    transition: transform 0.3s;
 }
 
 .model1-modelo-head{
@@ -64,7 +68,17 @@ body{
     text-align: center;
     height: 20px;
     width: 30px;
-    
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.model1-icono-play:hover{
+    box-shadow: 1px 2px 2px ;
+    cursor: pointer;
+}
+
+.model1-icono-play:active{
+    box-shadow: none;
+    background-color: $color5;
 }
 
 .model1-reproducir{
@@ -80,17 +94,23 @@ body{
 }
 
 .model1-boton-practica-conromaji{
-    height: 30px;
     width: 150px;
     padding-top: 5px;
+    transition: box-shadow 0.3s, background-color 0.3s;
 }
+
+.model1-boton-practica-conromaji:hover{
+    box-shadow: 1px 2px 2px ;
+    cursor: pointer;
+}
+
+
 
 .model1-texto-practica{
     margin-top: 5px;
     height: 50px;
     width: 100px;
     text-align: center;
-    transition: 1s;
 }
 
 .model1-texto-practica-static{
@@ -99,6 +119,7 @@ body{
 }
 
 .model1-texto-practica-dinamic{
+    margin-top: 10px;
     font-size: 30px;
     padding-top: 10%;
 }
@@ -130,6 +151,17 @@ body{
     width: 160px;
     text-align: center;
     padding-top: 5px;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.model1-texto-show:hover{
+    box-shadow: 1px 2px 2px ;
+    cursor: pointer;
+}
+
+.model1-texto-show:active{
+    box-shadow: none;
+    background-color: $color5;
 }
 
 .model1-icono-show{
@@ -163,6 +195,17 @@ body{
     border-radius: 5px;
     width: 60px;
     height: 35px;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.model1-boton-next:hover{
+    box-shadow: 1px 2px 2px ;
+    cursor: pointer;
+}
+
+.model1-boton-next:active{
+    box-shadow: none;
+    background-color: $color5;
 }
 
 .model1-boton-next-text{
