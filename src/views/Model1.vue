@@ -226,7 +226,7 @@ export default {
         require("../assets/img/hiragana/n.svg"),
       ],
       player: new Audio(),
-      index: Math.round(Math.random() * (1 + 46 - 0) + 0),
+      index: Math.round(Math.random() * (1 + 45 - 0) + 0),
     };
   },
   methods: {
@@ -236,7 +236,7 @@ export default {
     },
 
     nextOne() {
-      this.index = Math.round(Math.random() * (1 + 46 - 0) + 0);
+      this.index = Math.round(Math.random() * (1 + 45 - 0) + 0);
       this.asignIndex();
       this.showAd = "hide";
       this.showAs = "";
