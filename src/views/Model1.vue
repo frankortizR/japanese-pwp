@@ -2,15 +2,23 @@
   <Navbar></Navbar>
   <div class="model1-div-cont-part1">
     <div class="model1-div-cont-modelo1 modelosm">
-      <div class="model1-modelo-head">
-        <h3 class="model1-modelo-title model1-text">Modelo 1</h3>
-        <p class="model1-modelo-related model1-text">Sonido y Romaji</p>
+      <div class="model1-div-cont-info">
+        <div class="model1-modelo-head">
+          <h3 class="model1-modelo-title model1-text">Modelo 1</h3>
+          <p class="model1-modelo-related model1-text">Sonido y Romaji</p>
+        </div>
+        <p class="modelo1-modelo-description model1-text-description">
+          Se reproducirá la pronunciación de la letra y/o se mostrara el
+          character en romaji Escriba en su cuaderno el character y presione
+          revelar para comprobar su respuesta.
+        </p>
       </div>
-      <p class="modelo1-modelo-description model1-text-description">
-        Se reproducirá la pronunciación de la letra y/o se mostrara el character
-        en romaji Escriba en su cuaderno el character y presione revelar para
-        comprobar su respuesta.
-      </p>
+    <div
+      :class="'model1-boton-practica-auto ' + this.emptyA"
+      v-on:click="autoPressed"
+    >
+      Auto
+    </div>
     </div>
 
     <div class="model1-div-cont-separator"><hr class="model1-separator" /></div>
@@ -21,7 +29,10 @@
         <h3 class="model1-reproducir">Reproducir pronunciacion</h3>
       </div>
       <div class="model1-div-cont-practica-conromaji">
-        <div :class="'model1-boton-practica-conromaji ' + this.empty" v-on:click="pRomaji">
+        <div
+          :class="'model1-boton-practica-conromaji ' + this.emptyR"
+          v-on:click="pRomaji"
+        >
           Practicar con Romaji
         </div>
         <div class="model1-div-cont-practica">
@@ -42,7 +53,7 @@
         <div class="model1-texto-show" v-on:click="showAns">
           Mostrar la respuesta
         </div>
-        <div :class="'model1-icono-show ' + this.showAs" >
+        <div :class="'model1-icono-show ' + this.showAs">
           <h3 class="model-icono-noshow">?</h3>
         </div>
         <div :class="'model1-div-imagen-answear ' + this.showAd">
@@ -57,6 +68,7 @@
         <p class="model1-boton-next-text">Next</p>
       </div>
     </div>
+
     <div class="home-div-cont-advertaisment">Advertisment</div>
     <Cfooter></Cfooter>
   </div>
@@ -79,8 +91,11 @@ export default {
       showRs: "",
       showAd: "hide",
       showAs: "",
-      pressed: "pressed",
-      empty: "",
+      pressedR: "pressed",
+      emptyR: "",
+      pressedA: "pressed",
+      emptyA: "",
+      auto: false,
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),
@@ -226,7 +241,7 @@ export default {
         require("../assets/img/hiragana/n.svg"),
       ],
       player: new Audio(),
-      index: Math.round(Math.random() * (1 + 45 - 0) + 0),
+      index: Math.floor(Math.random() * (1 + 45 - 0) + 0),
     };
   },
   methods: {
@@ -236,12 +251,18 @@ export default {
     },
 
     nextOne() {
-      this.index = Math.round(Math.random() * (1 + 45 - 0) + 0);
+      this.index = Math.floor(Math.random() * (1 + 45 - 0) + 0);
       this.asignIndex();
       this.showAd = "hide";
       this.showAs = "";
       this.player.play();
-      //this.player.src = this.hiraganaS[this.index];
+      //auto
+      let stop = true;
+      if(this.auto == true) this.autoExecute()
+       else{
+         console.log("ya no next")
+         this.autoExecute(stop);
+       } 
     },
 
     pRomaji() {
@@ -250,16 +271,14 @@ export default {
       this.showRs = this.showRd;
       this.showRd = aux;
       console.log(this.showRs);
-      aux = this.pressed;
-      this.pressed = this.empty;
-      this.empty = aux;
+      aux = this.pressedR;
+      this.pressedR = this.emptyR;
+      this.emptyR = aux;
     },
     asignIndex() {
       this.player.src = this.hiraganaS[this.index];
       let conRomaji = document.getElementById("dinamico-romaji");
       conRomaji.innerHTML = this.hiraganaR[this.index];
-      console.log(conRomaji.innerHTML);
-      console.log("created");
     },
 
     showAns() {
@@ -269,6 +288,31 @@ export default {
       this.showAd = aux;
       console.log("mostrar respuesta");
     },
+
+    timer(){
+      console.log('pasaron dos segundos');
+      this.nextOne();
+    },
+    autoPressed(){
+      let stop = true;
+      this.auto = !this.auto;
+      console.log(this.auto);
+      let aux = this.pressedA;
+      this.pressedA = this.emptyA;
+      this.emptyA = aux;
+      if(this.auto == true) this.autoExecute()
+       else{
+         console.log("ya no pressed")
+         this.autoExecute(stop);
+       } 
+    },
+    autoExecute(stop){
+      let autoId = setTimeout(this.nextOne, 2000);
+      if(stop == true){
+        console.log("cancelado")
+        clearTimeout(autoId);
+      } 
+    }
   },
   mounted() {
     this.asignIndex();
