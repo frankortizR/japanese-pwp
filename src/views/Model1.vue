@@ -64,7 +64,7 @@
           />
         </div>
       </div>
-      <div class="model1-boton-next" v-on:click="nextOne">
+      <div class="model1-boton-next" v-on:click="nextOnePressed">
         <p class="model1-boton-next-text">Next</p>
       </div>
     </div>
@@ -250,19 +250,25 @@ export default {
       this.player.play();
     },
 
-    nextOne() {
+    nextOnePressed() {
+      if(this.auto == false) this.nextOneEx();
+      //auto
+      /* let stop = true;
+      if(this.auto == true) this.autoExecute()
+       else{
+         console.log("ya no next")
+         this.autoExecute(stop);
+       }  */
+    },
+
+    nextOneEx(){
       this.index = Math.floor(Math.random() * (1 + 45 - 0) + 0);
       this.asignIndex();
       this.showAd = "hide";
       this.showAs = "";
       this.player.play();
-      //auto
-      let stop = true;
-      if(this.auto == true) this.autoExecute()
-       else{
-         console.log("ya no next")
-         this.autoExecute(stop);
-       } 
+      if(this.auto) this.autoPressed(true);
+
     },
 
     pRomaji() {
@@ -293,25 +299,30 @@ export default {
       console.log('pasaron dos segundos');
       this.nextOne();
     },
-    autoPressed(){
-      let stop = true;
-      this.auto = !this.auto;
-      console.log(this.auto);
-      let aux = this.pressedA;
-      this.pressedA = this.emptyA;
-      this.emptyA = aux;
-      if(this.auto == true) this.autoExecute()
+    autoPressed(controlNext){
+      let autoId = "";
+      if(controlNext == true){
+      }else{
+        let stop = true;
+        this.auto = !this.auto;
+        console.log(this.auto);
+        let aux = this.pressedA;
+        this.pressedA = this.emptyA;
+        this.emptyA = aux;
+      }
+      
+         clearTimeout(autoId);
+         autoId = setTimeout(() => {
+           if(this.auto == false) clearTimeout(autoId);
+          this.nextOneEx()
+          }, 2000);
+           if(this.auto == false) clearTimeout(autoId);
+      
+      /* if(this.auto == true) this.autoExecute()
        else{
          console.log("ya no pressed")
          this.autoExecute(stop);
-       } 
-    },
-    autoExecute(stop){
-      let autoId = setTimeout(this.nextOne, 2000);
-      if(stop == true){
-        console.log("cancelado")
-        clearTimeout(autoId);
-      } 
+       }  */
     }
   },
   mounted() {
