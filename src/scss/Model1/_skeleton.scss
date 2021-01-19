@@ -245,3 +245,30 @@ body{
     padding-top: 5px;
     font-weight: bold;
 }
+
+.model1-div-cont-progresbar{
+    height: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.model1-div-cont-progresbar span{
+    margin: 0 0px;
+    display: block;
+    height: 30%;
+    
+}
+
+.start{
+    width: 0%;
+    transition: width 2s linear;
+}
+
+.end{
+    width: 100%;
+    transition: width 4s linear;
+}
+

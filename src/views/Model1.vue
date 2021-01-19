@@ -50,7 +50,7 @@
 
     <div class="model1-div-cont-answer">
       <div class="model1-div-cont-show">
-        <div class="model1-texto-show" v-on:click="showAns">
+        <div class="model1-texto-show" v-on:click="showAnsPressed">
           Mostrar la respuesta
         </div>
         <div :class="'model1-icono-show ' + this.showAs">
@@ -64,6 +64,11 @@
           />
         </div>
       </div>
+
+      <div class="model1-div-cont-progresbar">
+        <span :class="progres"></span>
+      </div>
+
       <div class="model1-boton-next" v-on:click="nextOnePressed">
         <p class="model1-boton-next-text">Next</p>
       </div>
@@ -96,6 +101,7 @@ export default {
       pressedA: "pressed",
       emptyA: "",
       auto: false,
+      progres: "start",
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),
@@ -252,13 +258,6 @@ export default {
 
     nextOnePressed() {
       if (this.auto == false) this.nextOneEx();
-      //auto
-      /* let stop = true;
-      if(this.auto == true) this.autoExecute()
-       else{
-         console.log("ya no next")
-         this.autoExecute(stop);
-       }  */
     },
 
     nextOneEx() {
@@ -285,19 +284,24 @@ export default {
       conRomaji.innerHTML = this.hiraganaR[this.index];
     },
 
-    showAns() {
+    showAnsPressed() {
+      if (this.auto == false) this.showAnsEx();
+    },
+
+    showAnsEx(control) {
       let aux;
       aux = this.showAs;
       this.showAs = this.showAd;
       this.showAd = aux;
       console.log("mostrar respuesta");
+      if (control == true) this.progres = "start";
     },
 
     timer() {
       console.log("pasaron dos segundos");
       this.nextOne();
     },
-    autoPressed(controlNext) {
+    autoPressed() {
       let intervalo;
       this.auto = !this.auto;
       console.log(this.auto);
@@ -305,10 +309,24 @@ export default {
       this.pressedA = this.emptyA;
       this.emptyA = aux;
       //intervalo
-      if (this.auto == true) intervalo = setInterval(() => {
+      if (this.auto == true) {
+        this.progres = "end";
         this.nextOneEx();
-        if(this.auto == false) clearInterval(intervalo);
-      }, 2000);
+        let timeans = setTimeout(() => {
+          let autowasactive = true;
+          this.showAnsEx(autowasactive);
+        }, 4000);
+
+        intervalo = setInterval(() => {
+          this.progres = "end";
+          let timeans = setTimeout(() => {
+            let autowasactive = true;
+            this.showAnsEx(autowasactive);
+          }, 4000);
+          this.nextOneEx();
+          if (this.auto == false) clearInterval(intervalo);
+        }, 6000);
+      }
     },
   },
   mounted() {
