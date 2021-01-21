@@ -50,6 +50,13 @@ body{
     font-size: 90%;
 }
 
+.model1-div-cont-configs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
 .model1-boton-practica-auto{
     width: 100px;
     margin: 15px 0 15px;

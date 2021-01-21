@@ -13,11 +13,13 @@
           revelar para comprobar su respuesta.
         </p>
       </div>
+      <div class="model1-div-cont-configs">
       <div
         :class="'model1-boton-practica-auto ' + this.emptyA"
         v-on:click="autoPressed"
       >
         Auto
+      </div>
       </div>
     </div>
 
