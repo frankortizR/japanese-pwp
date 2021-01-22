@@ -1,32 +1,36 @@
-.model1-div-cont-part1{
+
+
+.model1-div-cont-part1 {
     background-color: $color1;
 }
 
-.model1-div-cont-modelo1{
+.model1-div-cont-modelo1 {
     background: none;
 }
 
-.model1-text{
+.model1-text {
     color: $color2;
 }
-.model1-text-description{
+
+.model1-text-description {
     color: $color3;
 }
+
 //styles de parte de practica
-.model1-icono-play{
+.model1-icono-play {
     border-style: solid;
     border-radius: 5px;
     text-decoration: none;
     border-color: $color2;
     border-width: 2px;
     background-color: $color1
-    
 }
-.model1-reproducir{
+
+.model1-reproducir {
     color: $color3;
 }
 
-.model1-boton-practica-conromaji{
+.model1-boton-practica-conromaji {
     border-style: solid;
     border-radius: 5px;
     border-width: 2px;
@@ -34,7 +38,7 @@
     text-align: center;
 }
 
-.model1-boton-practica-auto{
+.model1-boton-practica-auto {
     border-style: solid;
     border-radius: 5px;
     border-width: 2px;
@@ -42,34 +46,41 @@
     text-align: center;
 }
 
-.model1-texto-practica{
+.model1-texto-practica {
     font-size: 100%;
     color: $color3;
 }
 
-.pressed{
+.pressed {
     background-color: $color5;
     color: $color1;
 }
 
 //style show answer
-.model1-texto-show{
+.model1-texto-show {
     border-color: $color3;
     color: $color2;
 }
 
-.model1-boton-next{
+.model1-boton-next {
     border-color: $color3;
 }
 
-.model1-texto-practica-dinamic{
+.model1-texto-practica-dinamic {
     color: $color2;
 }
 
-.model1-div-cont-progresbar{
+.model1-div-cont-progresbar {
     background-color: $color2;
 }
 
-.model1-div-cont-progresbar span{
+.model1-div-cont-progresbar span {
     background-color: $color5;
+}
+
+.model1-boton-practica-mute {
+    border-style: solid;
+    border-color: $color3;
+    border-radius: 5px;
+    border-width: 2px;
 }

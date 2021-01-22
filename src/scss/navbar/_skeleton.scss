@@ -2,7 +2,8 @@
     height: 60px;
     width: 100%;
     position: fixed;
-    
+    top: 0;
+    z-index: 50;
 }
 
 .nav{
@@ -43,10 +44,7 @@
     margin-right: 10%;
 }
 
-.title{
-    line-height: 30px;
-    font-size: 120%;
-}
+
 
 .div-cont-displayopt{
     width: 30px;

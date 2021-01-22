@@ -1,7 +1,13 @@
 <template>
   <Navbar></Navbar>
   <div class="model1-div-cont-part1">
-    <div class="model1-div-cont-modelo1 modelosm">
+    <div class="model1-div-cont-beforeadver">
+
+      <div class="titulo-principal">
+          <h1 class="title">Hiragana practice</h1>
+        </div>
+
+    <div class="model1-div-cont-modelo1 ">
       <div class="model1-div-cont-info">
         <div class="model1-modelo-head">
           <h3 class="model1-modelo-title model1-text">Modelo 1</h3>
@@ -15,10 +21,16 @@
       </div>
       <div class="model1-div-cont-configs">
       <div
-        :class="'model1-boton-practica-auto ' + this.emptyA"
+        :class="'model1-boton-practica-auto opt' + this.emptyA"
         v-on:click="autoPressed"
       >
         Auto
+      </div>
+      <div
+        :class="'model1-boton-practica-mute opt' + this.emptyA"
+        v-on:click="autoPressed"
+      >
+        Mute
       </div>
       </div>
     </div>
@@ -75,10 +87,11 @@
         <p class="model1-boton-next-text">Next</p>
       </div>
     </div>
+    </div>
 
     <div class="home-div-cont-advertaisment">Advertisment</div>
-    <Cfooter></Cfooter>
   </div>
+    <Cfooter></Cfooter>
 </template>
 
 <script>

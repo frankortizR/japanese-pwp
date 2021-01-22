@@ -1,63 +1,78 @@
-body{
+body {
     background-color: $color1;
 }
-.model1-div-cont-part1{
-    padding-top: 60px;
+
+.titulo-principal {
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    font-size: 100%;
+    text-align: center;
+}
+
+
+.model1-div-cont-part1 {
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
-.model1-div-cont-modelo1{
+.model1-div-cont-modelo1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px;
+
 }
 
 
-.model1-title{
+.model1-title {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 
-.model1-div-cont-info{
+.model1-div-cont-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 150px;
+    width: 70%;
+    box-sizing: content-box;
 }
 
-.model1-modelo-head{
+.model1-modelo-head {
     display: block;
     width: 100%;
 }
 
-.model1-modelo-title{
+.model1-modelo-title {
     display: inline;
     font-size: 30px;
 }
 
-.model1-modelo-related{
+.model1-modelo-related {
     display: inline;
     margin-left: 10%;
     font-size: 20px;
 }
 
-.moidel1-modelo-description{
+.moidel1-modelo-description {
     font-size: 90%;
+    box-sizing: content-box;
 }
 
-.model1-div-cont-configs{
+.model1-div-cont-configs {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    width: 70%;
+    justify-content: space-around;
     align-content: center;
+
 }
 
-.model1-boton-practica-auto{
+.model1-boton-practica-auto {
     width: 100px;
     margin: 15px 0 15px;
     padding-top: 5px;
@@ -65,24 +80,36 @@ body{
     user-select: none;
 }
 
-.model1-boton-practica-auto:hover{
-    box-shadow: 1px 2px 2px ;
+.model1-boton-practica-auto:hover {
+    box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
-.model1-boton-practica-auto:active{
+.model1-boton-practica-auto:active {
     box-shadow: none;
     background-color: $color5;
 }
 
-.model1-div-cont-separator{
+.model1-boton-practica-mute {
+    width: 100px;
+    margin: 15px 0;
+    padding-top: 5px;
+    user-select: none;
+    text-align: center;
+}
+
+.model1-div-cont-separator {
     width: 80%;
     margin: auto;
 }
 
-.model1-separator{
+.model1-separator {
     height: 0.5px;
     background-color: $color2;
+}
+
+.opt {
+    margin: 15px 5px;
 }
 
 
@@ -90,18 +117,18 @@ body{
 //estilos de practica
 
 
-.model1-div-cont-practice{
+.model1-div-cont-practice {
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.model1-div-cont-play{
+.model1-div-cont-play {
     display: flex;
     justify-content: center;
 }
 
-.model1-icono-play{
+.model1-icono-play {
     text-align: center;
     height: 20px;
     width: 30px;
@@ -109,21 +136,21 @@ body{
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.model1-icono-play:hover{
-    box-shadow: 1px 2px 2px ;
+.model1-icono-play:hover {
+    box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
-.model1-icono-play:active{
+.model1-icono-play:active {
     box-shadow: none;
     background-color: $color5;
 }
 
-.model1-reproducir{
+.model1-reproducir {
     margin-left: 3%;
 }
 
-.model1-div-cont-practica-conromaji{
+.model1-div-cont-practica-conromaji {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,7 +158,7 @@ body{
     height: 110px;
 }
 
-.model1-boton-practica-conromaji{
+.model1-boton-practica-conromaji {
     width: 150px;
     padding-top: 5px;
     user-select: none;
@@ -140,52 +167,60 @@ body{
 
 
 
-.model1-boton-practica-conromaji:hover{
-    box-shadow: 1px 2px 2px ;
+.model1-boton-practica-conromaji:hover {
+    box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
+.model1-div-cont-practica {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 
-.model1-texto-practica{
-    margin-top: 5px;
-    height: 50px;
-    width: 100px;
+.model1-texto-practica {
+    height: 80%;
+    width: 80%;
     text-align: center;
 }
 
-.model1-texto-practica-static{
+.model1-texto-practica-static {
     font-size: 30px;
     padding-top: 10%;
 }
 
-.model1-texto-practica-dinamic{
-    margin-top: 10px;
+.model1-texto-practica-dinamic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
-    padding-top: 10%;
+    height: 80%;
 }
 
 
-.hide{
+.hide {
     display: none;
 }
 
 //style show answer
-.model1-div-cont-answer{
+.model1-div-cont-answer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
 }
 
-.model1-div-cont-show{
+.model1-div-cont-show {
     display: flex;
     justify-content: center;
     padding-top: 20px;
     align-items: center;
 }
 
-.model1-texto-show{
+.model1-texto-show {
     border-style: solid;
     border-radius: 5px;
     height: 30px;
@@ -196,40 +231,40 @@ body{
     transition: box-shadow 0.3s, background-color 0.3s;
 }
 
-.model1-texto-show:hover{
-    box-shadow: 1px 2px 2px ;
+.model1-texto-show:hover {
+    box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
-.model1-texto-show:active{
+.model1-texto-show:active {
     box-shadow: none;
     background-color: $color5;
 }
 
-.model1-icono-show{
+.model1-icono-show {
     width: 50px;
     height: 50px;
 }
 
-.model-icono-noshow{
+.model-icono-noshow {
     padding-top: 5px;
     margin: auto;
     font-size: 30px;
     text-align: center;
 }
 
-.model1-div-imagen-answear{
+.model1-div-imagen-answear {
     width: 50px;
     height: 50px;
-    
+
 }
 
-.model1-imagen-answear{
+.model1-imagen-answear {
     width: 100%;
     height: 100%;
 }
 
-.model1-boton-next{
+.model1-boton-next {
     display: inline-block;
     text-align: center;
     margin-top: 10px;
@@ -241,24 +276,24 @@ body{
     transition: box-shadow 0.3s, background-color 0.3s;
 }
 
-.model1-boton-next:hover{
-    box-shadow: 1px 2px 2px ;
+.model1-boton-next:hover {
+    box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
-.model1-boton-next:active{
+.model1-boton-next:active {
     box-shadow: none;
     background-color: $color5;
 }
 
-.model1-boton-next-text{
+.model1-boton-next-text {
     font-size: 20px;
     color: $color2;
     padding-top: 5px;
     font-weight: bold;
 }
 
-.model1-div-cont-progresbar{
+.model1-div-cont-progresbar {
     height: 10px;
     width: 200px;
     display: flex;
@@ -267,20 +302,90 @@ body{
     align-items: center;
 }
 
-.model1-div-cont-progresbar span{
+.model1-div-cont-progresbar span {
     margin: 0 0px;
     display: block;
     height: 30%;
-    
+
 }
 
-.start{
+.start {
     width: 0%;
     transition: width 2s linear;
 }
 
-.end{
+.end {
     width: 100%;
     transition: width 4s linear;
 }
 
+//==============================  RESPONSIVE DESIGN ==========================//
+
+
+
+@media screen and (min-width: 380px) {
+
+    .model1-div-cont-info {
+        max-width: 400px;
+    }
+
+    .model1-div-cont-configs {
+        max-width: 230px;
+    }
+
+    .model1-div-cont-practica-conromaji {
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        width: 300px;
+    }
+
+    .model1-div-cont-practice {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .model1-texto-practica-static {
+        font-size: 30px;
+        padding-top: 20%;
+    }
+
+    .model1-reproducir {
+        width: 300px;
+    }
+
+}
+
+//-----------------------------------------------------
+@media screen and (min-width: 1024px) {
+
+    .model1-div-cont-modelo1 {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 700px;
+        max-width: 900px;
+        margin: 10px;
+    }
+
+    .model1-div-cont-configs {
+        max-width: 300px;
+    }
+
+    .model1-div-cont-part1 {
+
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-div-cont-advertaisment {
+        height: 300px;
+        width: 20%;
+        max-width: 300px;
+    }
+}
