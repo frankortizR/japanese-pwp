@@ -18,7 +18,7 @@
     display: flex;
     flex-wrap: nowrap;
     height: 60px;
-    width: 100%;
+    width: 50%;
     justify-content: flex-start;
 }
 
@@ -34,15 +34,33 @@
     width: 100%;
     height: 100%;
 }
-
-.div-cont-title{
-    display: flex;
-    flex-wrap: no-wrap;
-    height: 60px;
-    width: 60%;
-    margin-left: 10%;
-    margin-right: 10%;
+.navbar-div-cont-lado2{
+    width: 40%;
 }
+
+.navbar-div-cont-pages{
+    padding-right: 25px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link{
+    text-decoration: none;
+    width: 100px;
+    margin: 5px;
+    text-align: center;
+    color: $color1;
+    font-size: 25px;
+    height: 40px;
+    padding-top: 10px;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+//-----------lado 2 -------------------------------//
 
 
 

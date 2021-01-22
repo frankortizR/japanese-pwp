@@ -7,9 +7,22 @@
         </div>
         
       </div>
-      <div class="div-cont-displayopt">
+
+
+      <div class="navbar-div-cont-lado2">
+
+        <div class="navbar-div-cont-pages">
+          <router-link class="link" to="/">Inicio</router-link>
+          <router-link class="link" to="/about">Info</router-link>
+          <div class="link" >Opciones</div>
+        </div>
+
+      <div class="div-cont-displayopt" style="display:none;">
         <button class="displayopt-boton">B</button>
       </div>
+      </div>
+
+
     </nav>
   </div>
 </template>
