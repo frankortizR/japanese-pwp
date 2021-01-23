@@ -17,8 +17,14 @@
           <div class="link" >Opciones</div>
         </div>
 
-      <div class="div-cont-displayopt" style="display:none;">
-        <button class="displayopt-boton">B</button>
+      <div class="div-cont-displayopt">
+        
+        <div :class="'nav-div-drop ' + this.drop">
+
+        <Dropdown></Dropdown>
+        </div>
+      
+        <img :class="'nav-icono-menu-'+this.drop" :src="menu" alt="icono-menu" @click="drop = !drop">
       </div>
       </div>
 
@@ -29,9 +35,24 @@
 
 <script>
 //imports
+import Dropdown from "../components/Dropdown.vue";
 
 export default {
   name: "Navbar",
-  components: {},
+  components: {
+    Dropdown
+  },
+  data() {
+    return {
+      drop:true,
+      menu: require('../assets/img/icons/menu.svg')
+    }
+  },
+  methods: {
+    dropit(){
+      let aux = this.drop;
+
+    }
+  },
 };
 </script>

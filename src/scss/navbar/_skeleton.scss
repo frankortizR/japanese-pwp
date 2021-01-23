@@ -36,6 +36,8 @@
 }
 .navbar-div-cont-lado2{
     width: 40%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar-div-cont-pages{
@@ -46,6 +48,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    //----
+    display: none;
 }
 
 .link{
@@ -65,15 +69,54 @@
 
 
 .div-cont-displayopt{
-    width: 30px;
+    width: 100px;
     height: 30px;
+    display: flex;
+    justify-content: flex-end;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-right: 15px ;
+    margin-right: 15px;
+    
     
 }
 
-.displayopt-boton{
-    width: 100%;
-    height: 100%;
+.nav-icono-menu-true{
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s;
+}
+
+.nav-icono-menu-false{
+    width: 30px;
+    height: 30px;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
+.nav-div-drop{
+    margin-top: 20px;
+    width: 120px;
+    height: 200px;
+    position: absolute;
+    z-index: -4;
+    background-color: $color2;
+    transform: translateX(15px);
+    transition: transform 0.5s;
+}
+
+.true{
+    transform: translatex(200px);
+    //transform: translateX(15px);
+}
+
+
+//=======================  responsive ================//@at-root
+
+@media screen and (min-width: 500px) {
+    .navbar-div-cont-pages{
+        display: flex;
+    }
+    .div-cont-displayopt{
+        display: none;
+    }   
 }

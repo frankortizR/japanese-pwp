@@ -1,0 +1,26 @@
+.drop-div-cont-drop{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.d-link{
+    text-decoration: none;
+    width: 100px;
+    margin: 5px;
+    text-align: center;
+    color: $color1;
+    font-size: 25px;
+    height: 40px;
+    padding-top: 10px;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.d-link:active{
+    background-color: $color3;
+    box-shadow: none;
+}
