@@ -5,7 +5,7 @@
     <p class="cfooter-description text">
       Inspirados en el aprendizaje y la constante practica ofrecemos nuestra
       plataforma para la ayuda de la memorizacion de los caracteres del idioma
-      japones tanto del Hiragana como del Katacana
+      japones tanto del Hiragana como del Katakana
     </p>
     <h3 class="cfooter-fecha text">@2021</h3>
   </div>

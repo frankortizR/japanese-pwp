@@ -3,7 +3,7 @@
     <Navbar/>
     <div class="about-div-cont-info">
       <h1>Acerca de nosotros</h1>
-      <div class="about-div-cont-mision">
+      <div class="about-div-cont-mision space-text">
         <h2>Misión</h2>
         <p>
           El aprendizaje del idioma Japonese presenta una dificultad extra muy peculiar de pocos idiomas. <br>
@@ -21,8 +21,14 @@
           <li>Se ofrecen diferentes modelos de memorización para incrementar la eficiencia de cada uno, donde se recomienda utilizarlos de manera interpolada</li>
         </ul>
       </div>
-      <div class="about-div-cont-vision">
+      <div class="about-div-cont-vision space-text">
         <h2>Visión</h2>
+        <p>
+          La practica constante es quien nos proporcionará el aprendizaje mas eficiente de este complejo idioma. <br>
+          Pondremos a disposicion nuestra plataforma para la práctica del Hirgana, sus reglas complejas, el Katakana, y demas modelos de memorización. 
+          <br>
+          La constante actualización de la plataforma pretende garantizar el correcto funcionamiento y disposicion de nuevas funcionalidades para la práctica.
+        </p>
       </div>
     </div>
     <cfooter/> 

@@ -25,7 +25,7 @@
               </div>
             </router-link>
 
-            <router-link class="link-pagina" to="/model1">
+            <router-link class="link-pagina" to="">
               <div class="home-div-cont-modelo1 modelos">
                 <div class="home-modelo-head">
                   <h3 class="home-modelo-title model-text">Modelo 1</h3>
@@ -39,7 +39,7 @@
               </div>
             </router-link>
 
-            <router-link class="link-pagina" to="/model1">
+            <router-link class="link-pagina" to="">
               <div class="home-div-cont-modelo1 modelos">
                 <div class="home-modelo-head">
                   <h3 class="home-modelo-title model-text">Modelo 1</h3>
