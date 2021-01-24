@@ -12,9 +12,18 @@
       <div class="navbar-div-cont-lado2">
 
         <div class="navbar-div-cont-pages">
-          <router-link class="link" to="/">Inicio</router-link>
-          <router-link class="link" to="/about">Info</router-link>
-          <div class="link" >Opciones</div>
+          <router-link class="link" to="/">
+          <img class="nav-icon" :src="iconHome" alt="icono-home">
+          Inicio
+          </router-link>
+          <router-link class="link" to="/about">
+          <img class="nav-icon" :src="iconAbout" alt="icon-about">
+          Info
+          </router-link>
+          <div class="link" >
+            <img class="nav-icon" :src="iconOpt" alt="icono-options">
+            Opciones
+            </div>
         </div>
 
       <div class="div-cont-displayopt">
@@ -45,7 +54,10 @@ export default {
   data() {
     return {
       drop:true,
-      menu: require('../assets/img/icons/menu.svg')
+      menu: require('../assets/img/icons/menu.svg'),
+      iconHome: require('../assets/img/icons/home.svg'),
+      iconAbout: require('../assets/img/icons/information-solid.svg'),
+      iconOpt: require('../assets/img/icons/cheveron-outline-down.svg'),
     }
   },
   methods: {

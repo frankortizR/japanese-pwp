@@ -183,8 +183,9 @@ body {
 
 .model1-icono-play {
     text-align: center;
-    height: 20px;
-    width: 30px;
+    height: 30px;
+    width: 40px;
+    padding-left: 2px;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -210,6 +211,7 @@ body {
 
 .model1-reproducir {
     margin-left: 3%;
+    padding-top: 6px;
 }
 
 .model1-div-cont-practica-conromaji {

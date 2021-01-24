@@ -20,7 +20,7 @@
 
 .d-link{
     text-decoration: none;
-    width: 100px;
+    width: 140px;
     margin: 5px;
     text-align: center;
     color: $color1;
@@ -38,4 +38,14 @@
     background-color: $color3;
     -webkit-box-shadow: none;
             box-shadow: none;
+}
+
+.drop-icon{
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.drop-icono-about{
+    padding-top: 1px;
 }

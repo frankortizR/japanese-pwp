@@ -43,7 +43,9 @@
 
     <div class="model1-div-cont-practice">
       <div class="model1-div-cont-play">
-        <div class="model1-icono-play" v-on:click="playSound">P</div>
+        
+          <img class="model1-icono-play" v-on:click="playSound" :src="iconPlay" alt="icono-play">
+        
         <h3 class="model1-reproducir">Reproducir pronunciación</h3>
       </div>
       <div class="model1-div-cont-practica-conromaji">
@@ -121,6 +123,7 @@ export default {
       emptyA: "",
       auto: false,
       progres: "start",
+      iconPlay: require('../assets/img/icons/play.svg'),
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),
