@@ -17,7 +17,7 @@
           Inicio
           </router-link>
           <router-link class="link" to="/about">
-          <img class="nav-icon" :src="iconAbout" alt="icon-about">
+          <img class="nav-icon" :src="iconAbout" alt="icono-about">
           Info
           </router-link>
           <div class="link" >
