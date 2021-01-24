@@ -1,10 +1,15 @@
+
 body {
     background-color: $color1;
 }
 
 .titulo-principal {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     line-height: 30px;
     font-size: 100%;
     text-align: center;
@@ -17,10 +22,19 @@ body {
 }
 
 .model1-div-cont-modelo1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 10px;
 
 }
@@ -34,12 +48,22 @@ body {
 
 
 .model1-div-cont-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 70%;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 
 .model1-modelo-head {
@@ -60,15 +84,23 @@ body {
 
 .moidel1-modelo-description {
     font-size: 90%;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 
 .model1-div-cont-configs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 70%;
-    justify-content: space-around;
-    align-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: center;
+        align-content: center;
 
 }
 
@@ -76,17 +108,26 @@ body {
     width: 100px;
     margin: 15px 0 15px;
     padding-top: 5px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
     transition: box-shadow 0.3s, background-color 0.3s;
-    user-select: none;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .model1-boton-practica-auto:hover {
-    box-shadow: 1px 2px 2px;
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
 .model1-boton-practica-auto:active {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: $color5;
 }
 
@@ -94,7 +135,10 @@ body {
     width: 100px;
     margin: 15px 0;
     padding-top: 5px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     text-align: center;
 }
 
@@ -119,30 +163,48 @@ body {
 
 .model1-div-cont-practice {
     padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .model1-div-cont-play {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .model1-icono-play {
     text-align: center;
     height: 20px;
     width: 30px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+    transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: transform 0.3s, box-shadow 0.3s;
     transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .model1-icono-play:hover {
-    box-shadow: 1px 2px 2px;
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
 .model1-icono-play:active {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: $color5;
 }
 
@@ -151,9 +213,16 @@ body {
 }
 
 .model1-div-cont-practica-conromaji {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 20px;
     height: 110px;
 }
@@ -161,23 +230,37 @@ body {
 .model1-boton-practica-conromaji {
     width: 150px;
     padding-top: 5px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
     transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
 }
 
 
 
 .model1-boton-practica-conromaji:hover {
-    box-shadow: 1px 2px 2px;
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
 .model1-div-cont-practica {
     height: 100px;
     width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
 }
 
@@ -193,9 +276,15 @@ body {
 }
 
 .model1-texto-practica-dinamic {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 30px;
     height: 80%;
 }
@@ -207,17 +296,30 @@ body {
 
 //style show answer
 .model1-div-cont-answer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-bottom: 20px;
 }
 
 .model1-div-cont-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 20px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .model1-texto-show {
@@ -227,17 +329,26 @@ body {
     width: 160px;
     text-align: center;
     padding-top: 5px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
     transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .model1-texto-show:hover {
-    box-shadow: 1px 2px 2px;
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
 .model1-texto-show:active {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: $color5;
 }
 
@@ -272,17 +383,26 @@ body {
     border-radius: 5px;
     width: 60px;
     height: 35px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
     transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .model1-boton-next:hover {
-    box-shadow: 1px 2px 2px;
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
 .model1-boton-next:active {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: $color5;
 }
 
@@ -296,10 +416,19 @@ body {
 .model1-div-cont-progresbar {
     height: 10px;
     width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .model1-div-cont-progresbar span {
@@ -311,11 +440,15 @@ body {
 
 .start {
     width: 0%;
+    -webkit-transition: width 2s linear;
+    -o-transition: width 2s linear;
     transition: width 2s linear;
 }
 
 .end {
     width: 100%;
+    -webkit-transition: width 4s linear;
+    -o-transition: width 4s linear;
     transition: width 4s linear;
 }
 
@@ -334,18 +467,32 @@ body {
     }
 
     .model1-div-cont-practica-conromaji {
-        flex-direction: row;
-        justify-content: space-around;
-        align-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -ms-flex-line-pack: center;
+            align-content: center;
         width: 300px;
     }
 
     .model1-div-cont-practice {
         padding: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .model1-texto-practica-static {
@@ -363,8 +510,12 @@ body {
 @media screen and (min-width: 1024px) {
 
     .model1-div-cont-modelo1 {
-        flex-direction: row;
-        justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         width: 700px;
         max-width: 900px;
         margin: 10px;
@@ -377,10 +528,19 @@ body {
     .model1-div-cont-part1 {
 
         margin-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .home-div-cont-advertaisment {

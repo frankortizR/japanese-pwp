@@ -1,3 +1,5 @@
+
+
 .div-cont-nav{
     height: 60px;
     width: 100%;
@@ -7,19 +9,29 @@
 }
 
 .nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: no-wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 100%;
     width: 100%;
 }
 
 .lado1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     height: 60px;
     width: 50%;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 
 .div-cont-logo{
@@ -36,19 +48,30 @@
 }
 .navbar-div-cont-lado2{
     width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .navbar-div-cont-pages{
     padding-right: 25px;
     height: 100%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    //----
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: none;
 }
 
@@ -61,7 +84,11 @@
     font-size: 25px;
     height: 40px;
     padding-top: 10px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
     transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
 }
 
 //-----------lado 2 -------------------------------//
@@ -71,8 +98,12 @@
 .div-cont-displayopt{
     width: 100px;
     height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-right: 15px;
@@ -83,14 +114,24 @@
 .nav-icono-menu-true{
     width: 30px;
     height: 30px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .nav-icono-menu-false{
     width: 30px;
     height: 30px;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .nav-div-drop{
@@ -100,12 +141,20 @@
     position: absolute;
     z-index: -4;
     background-color: $color2;
-    transform: translateX(15px);
+    -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+            transform: translateX(15px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .true{
-    transform: translatex(200px);
+    -webkit-transform: translatex(200px);
+        -ms-transform: translatex(200px);
+            transform: translatex(200px);
     //transform: translateX(15px);
 }
 
@@ -114,6 +163,8 @@
 
 @media screen and (min-width: 500px) {
     .navbar-div-cont-pages{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     .div-cont-displayopt{
