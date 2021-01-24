@@ -4,7 +4,7 @@
     <div class="home-parte1">
       <div class="home-div-cont-menu">
         <div class="titulo-principal">
-          <h1 class="title">Hiragana practice</h1>
+          <h1 class="title">Practica de Hiragana</h1>
         </div>
         <div class="model1-div-cont-adver">
           <div class="home-div-cont-modelos">
@@ -12,12 +12,15 @@
               <div class="home-div-cont-modelo1 modelos">
                 <div class="home-modelo-head">
                   <h3 class="home-modelo-title model-text">Modelo 1</h3>
-                  <p class="home-modelo-related model-text">Sonido y Romaji</p>
+                  <p class="home-modelo-related model-text">Pronunciación y Romaji</p>
                 </div>
                 <p class="home-modelo-description model-text">
-                  Se reproducirá la pronunciación de la letra y/o se mostrara el
-                  character en romaji Escriba en su cuaderno el character y
-                  presione revelar para comprobar su respuesta.
+                  <ul>
+                    <li>Practica de la escritura </li><br>
+                    <li>Escuchara la pronunciacion de caracteres basicos del hiragana</li><br>
+                    <li>En su cuaderno escriba la letra correspondiente</li><br>
+                    <li>Compare respuesta con la visualiuzacion</li>
+                  </ul>
                 </p>
               </div>
             </router-link>

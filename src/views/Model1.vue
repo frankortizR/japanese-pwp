@@ -4,19 +4,23 @@
     <div class="model1-div-cont-beforeadver">
 
       <div class="titulo-principal">
-          <h1 class="title">Hiragana practice</h1>
+          <h1 class="title">Práctica de Hiragana</h1>
         </div>
 
     <div class="model1-div-cont-modelo1 ">
       <div class="model1-div-cont-info">
         <div class="model1-modelo-head">
           <h3 class="model1-modelo-title model1-text">Modelo 1</h3>
-          <p class="model1-modelo-related model1-text">Sonido y Romaji</p>
+          <p class="model1-modelo-related model1-text">Pronunciación y Romaji</p>
         </div>
         <p class="modelo1-modelo-description model1-text-description">
-          Se reproducirá la pronunciación de la letra y/o se mostrara el
-          character en romaji Escriba en su cuaderno el character y presione
-          revelar para comprobar su respuesta.
+          <ul>
+                    <li>Practica de la escritura </li>
+                    <li>Escuchara la pronunciacion de caracteres basicos del hiragana</li>
+                    <li>En su cuaderno escriba la letra correspondiente</li>
+                    <li>Compare respuesta con la visualiuzacion</li>
+                  <strong>Enfatiza la escritura</strong>
+                  </ul>
         </p>
       </div>
       <div class="model1-div-cont-configs">
@@ -40,7 +44,7 @@
     <div class="model1-div-cont-practice">
       <div class="model1-div-cont-play">
         <div class="model1-icono-play" v-on:click="playSound">P</div>
-        <h3 class="model1-reproducir">Reproducir pronunciacion</h3>
+        <h3 class="model1-reproducir">Reproducir pronunciación</h3>
       </div>
       <div class="model1-div-cont-practica-conromaji">
         <div
@@ -65,7 +69,7 @@
     <div class="model1-div-cont-answer">
       <div class="model1-div-cont-show">
         <div class="model1-texto-show" v-on:click="showAnsPressed">
-          Mostrar la respuesta
+          Mostrar respuesta
         </div>
         <div :class="'model1-icono-show ' + this.showAs">
           <h3 class="model-icono-noshow">?</h3>

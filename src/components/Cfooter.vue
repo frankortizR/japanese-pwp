@@ -1,4 +1,5 @@
 <template>
+<div class="cfooter-div-padre-footer">
   <div class="cfooter-div-cont-footer">
     <h2 class="cfooter-title text">Rath</h2>
     <p class="cfooter-description text">
@@ -8,6 +9,7 @@
     </p>
     <h3 class="cfooter-fecha text">@2021</h3>
   </div>
+</div>
 </template>
 
 
