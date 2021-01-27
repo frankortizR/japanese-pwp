@@ -25,14 +25,14 @@
       </div>
       <div class="model1-div-cont-configs">
       <div
-        :class="'model1-boton-practica-auto opt' + this.emptyA"
+        :class="'model1-boton-practica-auto opt ' + this.emptyA"
         v-on:click="autoPressed"
       >
         Auto
       </div>
       <div
-        :class="'model1-boton-practica-mute opt' + this.emptyA"
-        v-on:click="autoPressed"
+        :class="'model1-boton-practica-mute opt' + this.mute"
+        v-on:click="mute = !mute"
       >
         Mute
       </div>
@@ -123,7 +123,9 @@ export default {
       emptyA: "",
       auto: false,
       progres: "start",
-      iconPlay: require('../assets/img/icons/play.svg'),
+      mute: false,
+      interval: Number,
+      iconPlay: require("../assets/img/icons/play.svg"),
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),
@@ -274,8 +276,8 @@ export default {
   },
   methods: {
     playSound() {
-      console.log("aqui se reproduce el sonido");
-      this.player.play();
+      if (this.mute == true) {
+      } else this.player.play();
     },
 
     nextOnePressed() {
@@ -287,7 +289,8 @@ export default {
       this.asignIndex();
       this.showAd = "hide";
       this.showAs = "";
-      this.player.play();
+      if (this.mute == true) {
+      } else this.player.play();
     },
 
     pRomaji() {
@@ -295,7 +298,7 @@ export default {
       aux = this.showRs;
       this.showRs = this.showRd;
       this.showRd = aux;
-      console.log(this.showRs);
+      console.log(this.interval);
       aux = this.pressedR;
       this.pressedR = this.emptyR;
       this.emptyR = aux;
@@ -324,35 +327,50 @@ export default {
       this.nextOne();
     },
     autoPressed() {
-      let intervalo;
       this.auto = !this.auto;
       console.log(this.auto);
+      // para cambiar estilo del boton
       let aux = this.pressedA;
       this.pressedA = this.emptyA;
       this.emptyA = aux;
       //intervalo
+      if (this.auto == false) {
+        clearInterval(this.interval);
+        clearInterval(this.interval - 1);
+        return false;
+      }
+
       if (this.auto == true) {
         this.progres = "end";
         this.nextOneEx();
-        let timeans = setTimeout(() => {
+        setTimeout(() => {
           let autowasactive = true;
+          console.log("primera");
           this.showAnsEx(autowasactive);
         }, 4000);
 
-        intervalo = setInterval(() => {
+        this.interval = setInterval(() => {
           this.progres = "end";
           let timeans = setTimeout(() => {
             let autowasactive = true;
+            console.log(typeof timeans);
             this.showAnsEx(autowasactive);
           }, 4000);
           this.nextOneEx();
-          if (this.auto == false) clearInterval(intervalo);
+          if (this.auto == false) {
+            clearInterval(this.interval);
+            clearInterval(this.interval - 1);
+          }
         }, 6000);
       }
     },
   },
   mounted() {
     this.asignIndex();
+  },
+  beforeUnmount() {
+    alert("saldra wacho");
+    clearInterval(this.interval);
   },
 };
 </script>
