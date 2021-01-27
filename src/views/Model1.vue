@@ -284,11 +284,17 @@ export default {
       if (this.auto == false) this.nextOneEx();
     },
 
-    nextOneEx() {
+    nextOneEx(control) {
       this.index = Math.floor(Math.random() * (1 + 45 - 0) + 0);
       this.asignIndex();
       this.showAd = "hide";
       this.showAs = "";
+      if (control === true) {
+        setTimeout(() => {
+          let autowasactive = true;
+          this.showAnsEx(autowasactive);
+        }, 4000);
+      }
       if (this.mute == true) {
       } else this.player.play();
     },
@@ -298,7 +304,6 @@ export default {
       aux = this.showRs;
       this.showRs = this.showRd;
       this.showRd = aux;
-      console.log(this.interval);
       aux = this.pressedR;
       this.pressedR = this.emptyR;
       this.emptyR = aux;
@@ -318,7 +323,6 @@ export default {
       aux = this.showAs;
       this.showAs = this.showAd;
       this.showAd = aux;
-      console.log("mostrar respuesta");
       if (control == true) this.progres = "start";
     },
 
@@ -328,7 +332,6 @@ export default {
     },
     autoPressed() {
       this.auto = !this.auto;
-      console.log(this.auto);
       // para cambiar estilo del boton
       let aux = this.pressedA;
       this.pressedA = this.emptyA;
@@ -336,31 +339,15 @@ export default {
       //intervalo
       if (this.auto == false) {
         clearInterval(this.interval);
-        clearInterval(this.interval - 1);
         return false;
       }
-
       if (this.auto == true) {
         this.progres = "end";
-        this.nextOneEx();
-        setTimeout(() => {
-          let autowasactive = true;
-          console.log("primera");
-          this.showAnsEx(autowasactive);
-        }, 4000);
-
+        let wasactivated = true;
+        this.nextOneEx(wasactivated);
         this.interval = setInterval(() => {
           this.progres = "end";
-          let timeans = setTimeout(() => {
-            let autowasactive = true;
-            console.log(typeof timeans);
-            this.showAnsEx(autowasactive);
-          }, 4000);
-          this.nextOneEx();
-          if (this.auto == false) {
-            clearInterval(this.interval);
-            clearInterval(this.interval - 1);
-          }
+          this.nextOneEx(wasactivated);
         }, 6000);
       }
     },
@@ -369,8 +356,8 @@ export default {
     this.asignIndex();
   },
   beforeUnmount() {
-    alert("saldra wacho");
     clearInterval(this.interval);
+    clearInterval(this.interval - 1);
   },
 };
 </script>
