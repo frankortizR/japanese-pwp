@@ -114,14 +114,16 @@
 //==============================  RESPONSIVE DESIGN ==========================//
 
 @media screen and (min-width: 380px) {
-    .modelos{
-        max-width: 600px;
-        min-width: 500px;
-    }
+    
 }
 
 //-----------------------------------------------------
 @media screen and (min-width: 1024px) {
+    .modelos{
+        max-width: 600px;
+        min-width: 500px;
+    }
+    
     .model1-div-cont-adver{
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
