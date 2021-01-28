@@ -25,16 +25,19 @@
               </div>
             </router-link>
 
-            <router-link class="link-pagina" to="">
+            <router-link class="link-pagina" to="/model2">
               <div class="home-div-cont-modelo1 modelos">
                 <div class="home-modelo-head">
-                  <h3 class="home-modelo-title model-text">Modelo 1</h3>
-                  <p class="home-modelo-related model-text">Sonido y Romaji</p>
+                  <h3 class="home-modelo-title model-text">Modelo2</h3>
+                  <p class="home-modelo-related model-text">Stylus y Romaji</p>
                 </div>
                 <p class="home-modelo-description model-text">
-                  Se reproducirá la pronunciación de la letra y/o se mostrara el
-                  character en romaji Escriba en su cuaderno el character y
-                  presione revelar para comprobar su respuesta.
+                  <ul>
+                    <li>Practica de la escritura</li><br>
+                    <li>Campo de escritura en pantalla</li><br>
+                    <li>Con Stylus mouse o touch </li><br>
+                    
+                  </ul>
                 </p>
               </div>
             </router-link>
