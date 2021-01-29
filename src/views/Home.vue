@@ -17,7 +17,7 @@
                 <p class="home-modelo-description model-text">
                   <ul>
                     <li>Practica de la escritura </li><br>
-                    <li>Escuchara la pronunciacion de caracteres basicos del hiragana</li><br>
+                    
                     <li>En su cuaderno escriba la letra correspondiente</li><br>
                     <li>Compare respuesta con la visualiuzacion</li>
                   </ul>
@@ -42,16 +42,19 @@
               </div>
             </router-link>
 
-            <router-link class="link-pagina" to="">
+            <router-link class="link-pagina" to="/model3">
               <div class="home-div-cont-modelo1 modelos">
                 <div class="home-modelo-head">
-                  <h3 class="home-modelo-title model-text">Modelo 1</h3>
-                  <p class="home-modelo-related model-text">Sonido y Romaji</p>
+                  <h3 class="home-modelo-title model-text">Modelo 3</h3>
+                  <p class="home-modelo-related model-text">Target y Romaji</p>
                 </div>
                 <p class="home-modelo-description model-text">
-                  Se reproducirá la pronunciación de la letra y/o se mostrara el
-                  character en romaji Escriba en su cuaderno el character y
-                  presione revelar para comprobar su respuesta.
+                  <ul>
+                    <li>Selecciona el caracter correcto</li><br>
+                    <li>3 opciones para elegir</li><br>
+                    <li>Compruebe su respuesta </li><br>
+                    
+                  </ul>
                 </p>
               </div>
             </router-link>
