@@ -49,11 +49,37 @@
     color: $color3;
 }
 
-.pressed {
+.model3-pressed {
     background-color: $color5;
     color: $color1;
 }
 
+.model3-boton-practica-automodel3-pressed {
+    width: 100%;
+    margin: 15px 0 15px;
+    padding-top: 5px;
+    background-color: $color5;
+    font-size: 20px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
+    color: white;
+}
+
+.model3-boton-practica-automodel3-pressed {
+    cursor: pointer;
+}
 .opttrue {
     background-color: $color5;
     color: $color1;
@@ -127,10 +153,10 @@
     background-color: #23a19d;
 }
 
-.char-right-true{
+.char-right-true {
     background-color: $color9;
 }
 
-.char-right-wrong{
+.char-right-wrong {
     background-color: $color4;
 }

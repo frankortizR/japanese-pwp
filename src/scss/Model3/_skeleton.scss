@@ -92,22 +92,23 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 70%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -ms-flex-line-pack: center;
-        align-content: center;
+        align-items: center;
 
 }
 
 .model3-boton-practica-auto {
-    width: 100px;
+    width: 100%;
     margin: 15px 0 15px;
     padding-top: 5px;
+    background-color: $color7;
+    font-size: 20px;
     -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
     transition: background-color 0.3s, -webkit-box-shadow 0.3s;
     -o-transition: box-shadow 0.3s, background-color 0.3s;
@@ -170,6 +171,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    width: 90%;
     //min-height: 80px;
 }
 
@@ -242,6 +244,8 @@ body {
             align-items: center;
     margin-bottom: 20px;
     max-width: 250px;
+    width: 30%;
+    min-width: 210px;
 }
 
 .model3-boton-practica-conromaji {
@@ -461,14 +465,14 @@ body {
 
 }
 
-.start {
+.model3-start {
     width: 0%;
     -webkit-transition: width 2s linear;
     -o-transition: width 2s linear;
     transition: width 2s linear;
 }
 
-.end {
+.model3-end {
     width: 100%;
     -webkit-transition: width 2s linear;
     -o-transition: width 2s linear;
@@ -500,7 +504,7 @@ body {
             justify-content: space-around;
         -ms-flex-line-pack: center;
             align-content: center;
-        width: 300px;
+        //width: 300px;
         margin:0;
     }
     

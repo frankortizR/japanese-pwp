@@ -92,22 +92,23 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 70%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -ms-flex-line-pack: center;
-        align-content: center;
+        align-items: center;
 
 }
 
 .model1-boton-practica-auto {
-    width: 100px;
+    
+    width: 100%;
     margin: 15px 0 15px;
     padding-top: 5px;
+    background-color: $color7;
+    font-size: 20px;
     -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
     transition: background-color 0.3s, -webkit-box-shadow 0.3s;
     -o-transition: box-shadow 0.3s, background-color 0.3s;
@@ -124,13 +125,22 @@ body {
             box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
-.model1-boton-practica-mute:hover{
+
+
+.model1-boton-practica-auto:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: $color5;
+}
+
+.model1-boton-practica-mute:hover {
     -webkit-box-shadow: 1px 2px 2px;
             box-shadow: 1px 2px 2px;
     cursor: pointer;
 }
 
-.model1-boton-practica-auto:active {
+
+.model1-boton-practica-mute:active {
     -webkit-box-shadow: none;
             box-shadow: none;
     background-color: $color5;
@@ -446,14 +456,14 @@ body {
 
 }
 
-.start {
+.model1-start {
     width: 0%;
     -webkit-transition: width 2s linear;
     -o-transition: width 2s linear;
     transition: width 2s linear;
 }
 
-.end {
+.model1-end {
     width: 100%;
     -webkit-transition: width 4s linear;
     -o-transition: width 4s linear;

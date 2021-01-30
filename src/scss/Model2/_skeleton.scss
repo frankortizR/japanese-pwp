@@ -92,22 +92,23 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 70%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -ms-flex-line-pack: center;
-        align-content: center;
+        align-items: center;
 
 }
 
 .model2-boton-practica-auto {
-    width: 100px;
+    width: 100%;
     margin: 15px 0 15px;
     padding-top: 5px;
+    background-color: $color7;
+    font-size: 20px;
     -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
     transition: background-color 0.3s, -webkit-box-shadow 0.3s;
     -o-transition: box-shadow 0.3s, background-color 0.3s;
@@ -185,6 +186,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 160px;
 }
 
 .model2-icono-play {
@@ -201,6 +203,13 @@ body {
     -o-transition: transform 0.3s, box-shadow 0.3s;
     transition: transform 0.3s, box-shadow 0.3s;
     transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.model2-div-cont-practice-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .model2-icono-play:hover {
@@ -444,14 +453,14 @@ body {
 
 }
 
-.start {
+.model2-start {
     width: 0%;
     -webkit-transition: width 2s linear;
     -o-transition: width 2s linear;
     transition: width 2s linear;
 }
 
-.end {
+.model2-end {
     width: 100%;
     -webkit-transition: width 4s linear;
     -o-transition: width 4s linear;
@@ -534,6 +543,8 @@ body {
     .model2-div-cont-configs {
         max-width: 300px;
     }
+
+    
 
     .model2-div-cont-part1 {
 

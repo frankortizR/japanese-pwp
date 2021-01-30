@@ -22,12 +22,14 @@
           </p>
         </div>
         <div class="model3-div-cont-configs">
-          <div :class="'model3-boton-practica-auto opt ' + this.emptyA" v-on:click="autoPressed">
-            Auto
+          <div :class="'model3-boton-practica-auto' + this.emptyA" v-on:click="autoPressed">
+            <strong>
+            Start Auto
+            </strong>
           </div>
-          <div :class="'model3-boton-practica-mute opt' + this.mute" v-on:click="mute = !mute">
+          <!-- <div :class="'model3-boton-practica-mute opt' + this.mute" v-on:click="mute = !mute">
             Mute
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -119,12 +121,12 @@
         showRs: "",
         showAd: "hide",
         showAs: "",
-        pressedR: "pressed",
+        pressedR: "model3-pressed",
         emptyR: "",
-        pressedA: "pressed",
+        pressedA: "model3-pressed",
         emptyA: "",
         auto: false,
-        progres: "start",
+        progres: "model3-start",
         mute: false,
         interval: Number,
         canvas_with: 120,
@@ -334,7 +336,7 @@
         aux = this.showAs;
         this.showAs = this.showAd;
         this.showAd = aux;
-        if (control == true) this.progres = "start";
+        if (control == true) this.progres = "model3-start";
         if (this.selected == this.charRight) {
           this.answear[this.selected] = "true";
         } else {
@@ -353,11 +355,11 @@
           return false;
         }
         if (this.auto == true) {
-          this.progres = "end";
+          this.progres = "model3-end";
           let wasactivated = true;
           this.nextOneEx(wasactivated);
           this.interval = setInterval(() => {
-            this.progres = "end";
+            this.progres = "model3-end";
             this.nextOneEx(wasactivated);
           }, 4000);
         }

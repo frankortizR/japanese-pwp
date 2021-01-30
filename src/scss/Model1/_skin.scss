@@ -50,10 +50,36 @@
     color: $color3;
 }
 
-.pressed {
+.model1-boton-practica-automodel1-pressed{
+    width: 100%;
+    margin: 15px 0 15px;
+    padding-top: 5px;
+    font-size: 20px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     background-color: $color5;
     color: $color1;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
 }
+.model1-boton-practica-automodel1-pressed:hover{
+    cursor: pointer;
+}
+.model1-pressed{
+    background-color: $color5;
+    color: $color1;   
+}
+
 .opttrue {
     background-color: $color5;
     color: $color1;

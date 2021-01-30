@@ -16,7 +16,6 @@
         <p class="modelo1-modelo-description model1-text-description">
           <ul>
                     <li>Practica de la escritura </li>
-                    <li>Escuchara la pronunciacion de caracteres basicos del hiragana</li>
                     <li>En su cuaderno escriba la letra correspondiente</li>
                     <li>Compare respuesta con la visualiuzacion</li>
                   <strong>Enfatiza la escritura</strong>
@@ -25,17 +24,19 @@
       </div>
       <div class="model1-div-cont-configs">
       <div
-        :class="'model1-boton-practica-auto opt ' + this.emptyA"
+        :class="'model1-boton-practica-auto' + this.emptyA"
         v-on:click="autoPressed"
       >
-        Auto
+      <strong>
+        Start auto
+      </strong>
       </div>
-      <div
+      <!-- <div
         :class="'model1-boton-practica-mute opt' + this.mute"
         v-on:click="mute = !mute"
       >
         Mute
-      </div>
+      </div> -->
       </div>
     </div>
 
@@ -117,12 +118,12 @@ export default {
       showRs: "",
       showAd: "hide",
       showAs: "",
-      pressedR: "pressed",
+      pressedR: "model1-pressed",
       emptyR: "",
-      pressedA: "pressed",
+      pressedA: "model1-pressed",
       emptyA: "",
       auto: false,
-      progres: "start",
+      progres: "model1-start",
       mute: false,
       interval: Number,
       iconPlay: require("../assets/img/icons/play.svg"),
@@ -323,12 +324,7 @@ export default {
       aux = this.showAs;
       this.showAs = this.showAd;
       this.showAd = aux;
-      if (control == true) this.progres = "start";
-    },
-
-    timer() {
-      console.log("pasaron dos segundos");
-      this.nextOne();
+      if (control == true) this.progres = "model1-start";
     },
     autoPressed() {
       this.auto = !this.auto;
@@ -342,11 +338,11 @@ export default {
         return false;
       }
       if (this.auto == true) {
-        this.progres = "end";
+        this.progres = "model1-end";
         let wasactivated = true;
         this.nextOneEx(wasactivated);
         this.interval = setInterval(() => {
-          this.progres = "end";
+          this.progres = "model1-end";
           this.nextOneEx(wasactivated);
         }, 6000);
       }
