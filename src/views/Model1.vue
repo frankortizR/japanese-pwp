@@ -10,7 +10,7 @@
     <div class="model1-div-cont-modelo1 ">
       <div class="model1-div-cont-info">
         <div class="model1-modelo-head">
-          <h3 class="model1-modelo-title model1-text">Modelo 1</h3>
+          <h3 class="model1-modelo-title model1-text">Modelo C</h3>
           <p class="model1-modelo-related model1-text">Pronunciación y Romaji</p>
         </div>
         <p class="modelo1-modelo-description model1-text-description">
@@ -47,14 +47,14 @@
         
           <img class="model1-icono-play" v-on:click="playSound" :src="iconPlay" alt="icono-play">
         
-        <h3 class="model1-reproducir">Reproducir pronunciación</h3>
+        <h3 class="model1-reproducir">Pronunciación</h3>
       </div>
       <div class="model1-div-cont-practica-conromaji">
         <div
           :class="'model1-boton-practica-conromaji ' + this.emptyR"
           v-on:click="pRomaji"
         >
-          Practicar con Romaji
+          Ocultar Romaji
         </div>
         <div class="model1-div-cont-practica">
           <div class="model1-texto-practica" :class="this.showRs">
@@ -105,6 +105,7 @@
 //imports
 import Navbar from "../components/Navbar.vue";
 import Cfooter from "../components/Cfooter.vue";
+import { mapState } from "vuex";
 
 export default {
   name: "Model1",
@@ -114,8 +115,8 @@ export default {
   },
   data() {
     return {
-      showRd: "hide",
-      showRs: "",
+      showRd: "",
+      showRs: "hide",
       showAd: "hide",
       showAs: "",
       pressedR: "model1-pressed",
@@ -275,9 +276,17 @@ export default {
       index: Math.floor(Math.random() * (1 + 45 - 0) + 0),
     };
   },
+  computed: {
+    ...mapState(["muted", "hidenRomaji"]),
+  },
+  watch: {
+    hidenRomaji: function (val) {
+      this.romajiChecker(val);
+    },
+  },
   methods: {
     playSound() {
-      if (this.mute == true) {
+      if (this.muted == true) {
       } else this.player.play();
     },
 
@@ -296,19 +305,10 @@ export default {
           this.showAnsEx(autowasactive);
         }, 4000);
       }
-      if (this.mute == true) {
+      if (this.muted == true) {
       } else this.player.play();
     },
 
-    pRomaji() {
-      let aux;
-      aux = this.showRs;
-      this.showRs = this.showRd;
-      this.showRd = aux;
-      aux = this.pressedR;
-      this.pressedR = this.emptyR;
-      this.emptyR = aux;
-    },
     asignIndex() {
       this.player.src = this.hiraganaS[this.index];
       let conRomaji = document.getElementById("dinamico-romaji");
@@ -347,9 +347,21 @@ export default {
         }, 6000);
       }
     },
+    romajiChecker(val){
+       console.log(val);
+      if(val == false){
+        this.showRs = "hide";
+        this.showRd = "";
+      } else {
+        this.showRs = "";
+        this.showRd = "hide";
+      }
+    }
   },
   mounted() {
     this.asignIndex();
+    this.romajiChecker(this.hidenRomaji);
+    
   },
   beforeUnmount() {
     clearInterval(this.interval);

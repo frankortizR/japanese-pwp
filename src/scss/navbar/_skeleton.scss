@@ -4,7 +4,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 50;
+    z-index: 500;
 }
 
 .nav{
@@ -93,9 +93,12 @@
 //-----------lado 2 -------------------------------//
 
 
-
+.navbar-div-cont-lado2{
+    display: flex;
+    align-items: center;
+}
 .div-cont-displayopt{
-    width: 100px;
+    width: 40px;
     height: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -171,6 +174,167 @@
     border-bottom-style: none;
 }
 
+.d-link{
+    user-select: none;
+}
+.d-link:active{
+    background-color: $color3;
+}
+
+//-------- Settings-----------
+.nav_settings_boton{
+    box-sizing: content-box;
+    height: 30px;
+    width: 100px;
+    text-decoration: none;
+    margin: 5px;
+    color: $color1;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.nav_settings_boton:active{
+    border-radius: 5px;
+    background-color: $color5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.nav-set-icon{
+    position: relative;
+}
+
+.nav-text-set{
+    display: flex;
+    align-items:center ;
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
+    margin-left: 5px;
+}
+
+/* .nav_div_cont_settingsfalse{
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    background-color:$color2;
+    top: -160px;
+    right: 60px;
+    z-index: -10;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -ms-transition: top 0.5s;
+    -o-transition: top 0.5s;
+} */
+
+.nav_div_cont_settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-color:$color2;
+    top: 60px;
+    right: 60px;
+    z-index: -10;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -ms-transition: top 0.5s;
+    -o-transition: top 0.5s;
+}
+
+.nav-hide-false{
+    top: -160px;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -ms-transition: top 0.5s;
+    -o-transition: top 0.5s;
+}
+
+.nav_boton_set{
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav_set_icon{
+    width: 20px;
+    height: 20px;
+    fill: $color1;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+
+.nav-icon-false{
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+
+.nav-icon-true{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.nav_set_text{
+    font-size: 15px;
+    margin-left: 5px;
+    color: $color1;
+}
+
+.nav_boton_set{
+    width: 80%;
+    border: 2px solid $color1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+}
+
+.nav_boton_set:active{
+    background-color: $color3;
+}
+
+.navopt_pressed_true{
+    background-color: $color4;
+}
 
 //=======================  responsive ================//@at-root
 
@@ -183,4 +347,8 @@
     .div-cont-displayopt{
         display: none;
     }   
+
+    .nav_settings_boton{
+        display: none;
+    }
 }
