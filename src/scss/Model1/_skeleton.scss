@@ -247,17 +247,13 @@ body {
 }
 
 .model1-boton-practica-conromaji {
-    width: 150px;
+    width: 70px;
     padding-top: 5px;
+    font-size: 20px;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
-    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
-    -o-transition: box-shadow 0.3s, background-color 0.3s;
-    transition: box-shadow 0.3s, background-color 0.3s;
-    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
 }
 
 
@@ -270,7 +266,7 @@ body {
 
 .model1-div-cont-practica {
     height: 100px;
-    width: 150px;
+    width: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -285,13 +281,13 @@ body {
 
 .model1-texto-practica {
     height: 80%;
-    width: 80%;
+    width: 70px;
     text-align: center;
 }
 
 .model1-texto-practica-static {
-    font-size: 30px;
-    padding-top: 10%;
+    font-size: 45px;
+    margin-top: 10%;
 }
 
 .model1-texto-practica-dinamic {
@@ -304,7 +300,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 30px;
+    font-size: 40px;
     height: 80%;
 }
 
@@ -491,7 +487,7 @@ body {
             -ms-flex-direction: row;
                 flex-direction: row;
         -ms-flex-pack: distribute;
-            justify-content: space-around;
+            justify-content: center;
         -ms-flex-line-pack: center;
             align-content: center;
         width: 300px;
@@ -515,7 +511,7 @@ body {
     }
 
     .model1-texto-practica-static {
-        font-size: 30px;
+        //font-size: 30px;
         padding-top: 20%;
     }
 

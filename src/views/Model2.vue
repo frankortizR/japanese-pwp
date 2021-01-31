@@ -55,9 +55,9 @@
             <h3 class="model2-reproducir">Pronunciación</h3>
           </div>
           <div class="model2-div-cont-practica-conromaji">
-            <div :class="'model2-boton-practica-conromaji ' + this.emptyR" v-on:click="pRomaji">
+            <!-- <div :class="'model2-boton-practica-conromaji ' + this.emptyR" v-on:click="pRomaji">
               Ocultar Romaji
-            </div>
+            </div> -->
             <div class="model2-div-cont-practica">
               <div class="model2-texto-practica" :class="this.showRs">
                 <h3 class="model2-texto-practica-static">abc</h3>
@@ -128,7 +128,7 @@ export default {
       progres: "model2-start",
       mute: false,
       interval: Number,
-      canvas_with: 120,
+      canvas_with: 220,
       canvas_height: 120,
       iconPlay: require("../assets/img/icons/play.svg"),
       hiraganaS: [

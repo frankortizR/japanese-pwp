@@ -50,12 +50,14 @@
         <h3 class="model1-reproducir">Pronunciación</h3>
       </div>
       <div class="model1-div-cont-practica-conromaji">
-        <div
+       <!--  <div
           :class="'model1-boton-practica-conromaji ' + this.emptyR"
           v-on:click="pRomaji"
         >
-          Ocultar Romaji
-        </div>
+        <i>
+          Romaji
+        </i>
+        </div> -->
         <div class="model1-div-cont-practica">
           <div class="model1-texto-practica" :class="this.showRs">
             <h3 class="model1-texto-practica-static">abc</h3>

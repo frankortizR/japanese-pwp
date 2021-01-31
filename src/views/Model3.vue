@@ -40,9 +40,9 @@
       <div class="model3-div-cont-practice">
         <div class="model3-div-cont-practice-content">
           <div class="model3-div-cont-practica-conromaji">
-            <div :class="'model3-boton-practica-conromaji ' + this.emptyR" v-on:click="pRomaji">
+           <!--  <div :class="'model3-boton-practica-conromaji ' + this.emptyR" v-on:click="pRomaji">
               Ocultar Romaji
-            </div>
+            </div> -->
             <div class="model3-div-cont-practica">
               <div class="model3-texto-practica" :class="this.showRs">
                 <h3 class="model3-texto-practica-static">abc</h3>
