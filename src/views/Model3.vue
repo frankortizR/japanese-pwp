@@ -11,7 +11,7 @@
         <div class="model3-div-cont-info">
           <div class="model3-modelo-head">
             <h3 class="model3-modelo-title model3-text">Modelo B</h3>
-            <p class="model3-modelo-related model3-text">Target y Romaji</p>
+            <img class="model3-icon-target" :src="targetmodelIcon" alt="">
           </div>
           <p class="modelo1-modelo-description model3-text-description">
             <ul>
@@ -135,6 +135,7 @@ export default {
       canvas_height: 120,
       charsOpt: [3],
       iconPlay: require("../assets/img/icons/play.svg"),
+      targetmodelIcon: require("../assets/img/icons/target.svg"),
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),

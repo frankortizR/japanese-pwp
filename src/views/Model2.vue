@@ -11,7 +11,7 @@
         <div class="model2-div-cont-info">
           <div class="model2-modelo-head">
             <h3 class="model2-modelo-title model2-text">Modelo A</h3>
-            <p class="model2-modelo-related model2-text">Stylus y Romaji</p>
+            <img class="model2-stylus-icon" :src="stylusmoodelIcon" alt="">
           </div>
           <p class="modelo1-modelo-description model2-text-description">
             <ul>
@@ -131,6 +131,7 @@ export default {
       canvas_with: 220,
       canvas_height: 120,
       iconPlay: require("../assets/img/icons/play.svg"),
+      stylusmoodelIcon: require("../assets/img/icons/quill-drawing-a-line.svg"),
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),

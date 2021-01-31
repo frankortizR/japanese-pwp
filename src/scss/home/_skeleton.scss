@@ -37,6 +37,7 @@
 }
 
 .home-div-cont-modelos{
+    
     padding-bottom: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -59,10 +60,11 @@
     padding-bottom: 10px;
 }
 
+
 .modelos{
     margin: 20px;
     padding: 20px;
-    
+    width: 90%;
     border-radius: 30px;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -83,19 +85,39 @@
 
 .home-modelo-head{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+
+.home-modelo-head1{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .home-modelo-title{
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 30px;
 }
 
 .home-modelo-related{
-    display: inline;
-    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     font-size: 20px;
-    min-width: 190px;
+    min-width: 130px;
+}
+
+.home-stylus-icon{
+    width: 40px;
+    height: 40px;
+    
+}
+.home-model-icon-path{
+    fill: $color1;
 }
 
 .home-modelo-description{
@@ -113,7 +135,19 @@
 
 //==============================  RESPONSIVE DESIGN ==========================//
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 400px) {
+    .home-modelo-head{
+        display: flex;
+        flex-direction: row;
+    }
+    .home-modelo-head1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .home-modelo-related{
+        justify-content: center;
+    }
     
 }
 

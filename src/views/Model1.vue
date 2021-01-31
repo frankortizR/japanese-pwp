@@ -11,13 +11,13 @@
       <div class="model1-div-cont-info">
         <div class="model1-modelo-head">
           <h3 class="model1-modelo-title model1-text">Modelo C</h3>
-          <p class="model1-modelo-related model1-text">Pronunciación y Romaji</p>
+          <img class="model1-book-icon" :src="bookmodelIcon" alt="">
         </div>
         <p class="modelo1-modelo-description model1-text-description">
           <ul>
-                    <li>Practica de la escritura </li>
-                    <li>En su cuaderno escriba la letra correspondiente</li>
-                    <li>Compare respuesta con la visualiuzacion</li>
+                    <li>Practica de la escritura </li><br>
+                    <li>En su cuaderno escriba la letra correspondiente</li><br>
+                    <li>Compare respuesta con la visualiuzacion</li><br>
                   <strong>Enfatiza la escritura</strong>
                   </ul>
         </p>
@@ -130,6 +130,7 @@ export default {
       mute: false,
       interval: Number,
       iconPlay: require("../assets/img/icons/play.svg"),
+      bookmodelIcon: require("../assets/img/icons/open-book.svg"),
       hiraganaS: [
         require("../assets/audio/hiragana/a.mp3"),
         require("../assets/audio/hiragana/i.mp3"),

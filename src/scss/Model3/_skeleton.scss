@@ -19,6 +19,7 @@ body {
 .model3-div-cont-part1 {
     margin-top: 60px;
     margin-bottom: 20px;
+    user-select: none;
 }
 
 .model3-div-cont-modelo1 {
@@ -48,6 +49,8 @@ body {
 
 
 .model3-div-cont-info {
+    user-select: text;
+    cursor: default;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -67,8 +70,14 @@ body {
 }
 
 .model3-modelo-head {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+}
+
+.model3-icon-target{
+    width: 40px;
+    height: 40px;
 }
 
 .model3-modelo-title {
@@ -563,6 +572,8 @@ body {
 
     .model3-div-cont-configs {
         max-width: 300px;
+        height: 10em;
+        justify-content: flex-end;
     }
 
     .model3-div-cont-part1 {
@@ -597,5 +608,11 @@ body {
     .model3-div-cont-play{
         margin: 0;
         margin-left: 60px;
+    }
+    .model3-div-cont-info{
+        align-items: flex-start;
+    }
+    .model3-modelo-head{
+        width: 80%;
     }
 }
