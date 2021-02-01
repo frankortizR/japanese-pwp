@@ -131,9 +131,17 @@
 
 .link-pagina{
     text-decoration: none;
+
 }
 
 //==============================  RESPONSIVE DESIGN ==========================//
+
+@media screen and (max-width: 400px) {
+    .link-pagina{
+        width: 90%;
+    }   
+}
+
 
 @media screen and (min-width: 400px) {
     .home-modelo-head{

@@ -491,6 +491,69 @@ body {
     -ms-transition: width 2s linear;
 }
 
+.model3-div-cont-progress-task{
+    width: 80%;
+    height: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px  0;
+}
+
+.model3_progress_task_box{
+    height: 90%;
+    width: 8%;
+    border: 2px solid $color2;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+}
+
+.model3_final_message{
+    width: 60%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$color2;
+    margin: 10px 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.model3_final_message h6 {
+    font-size: 145%;
+    font-weight: 900;
+}
+
+.model3_div_congrats_false{
+    display: none;
+}
+
+.model3_div_nograts_false{
+    display: none;
+}
+
+.model3_div_congrats_right{
+    color: $color7;
+}
+
+.model3_div_nograts_wrong{
+    color: $color5;
+}
+
+
+
+
+
 //==============================  RESPONSIVE DESIGN ==========================//
 
 

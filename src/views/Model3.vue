@@ -93,6 +93,22 @@
         <div class="model3-boton-next" v-on:click="nextOnePressed">
           <p class="model3-boton-next-text">Next</p>
         </div>
+
+        <div class="model3-div-cont-progress-task">
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[0]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[1]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[2]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[3]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[4]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[5]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[6]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[7]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[8]"></div>
+          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[9]"></div>
+        </div>
+
+        <div :class="'model3_final_message model3_div_congrats_'+showGrats[0]"><h6> ¡¡Bien Hecho!!</h6></div>
+        <div :class="'model3_final_message model3_div_nograts_'+showGrats[1]"><h6>Mas práctica! :D</h6></div>
       </div>
     </div>
 
@@ -115,6 +131,9 @@ export default {
   },
   data() {
     return {
+      numerodeBuenas: 0,
+      numerodeMalas: 0,
+      showGrats: ["false", "false"],
       charRight: Number,
       answear: ["false", "false", "false"],
       selected: Number,
@@ -134,6 +153,8 @@ export default {
       canvas_with: 120,
       canvas_height: 120,
       charsOpt: [3],
+      ProgresTasks: [],
+      indexProgresTasks: 0,
       iconPlay: require("../assets/img/icons/play.svg"),
       targetmodelIcon: require("../assets/img/icons/target.svg"),
       hiraganaS: [
@@ -335,6 +356,18 @@ export default {
       if (this.auto == false) this.showAnsEx();
     },
 
+    progressTaskFunction(control) {
+      if (control == true && this.auto == true) {
+        this.ProgresTasks[this.indexProgresTasks] = "true";
+        this.indexProgresTasks++;
+        this.numerodeBuenas++;
+      }
+      if (control == false && this.auto == true) {
+        this.ProgresTasks[this.indexProgresTasks] = "wrong";
+        this.indexProgresTasks++;
+      }
+    },
+
     showAnsEx(control) {
       let aux;
       aux = this.showAs;
@@ -343,12 +376,35 @@ export default {
       if (control == true) this.progres = "model3-start";
       if (this.selected == this.charRight) {
         this.answear[this.selected] = "true";
+        this.progressTaskFunction(true);
       } else {
         this.answear[this.selected] = "wrong";
+        this.progressTaskFunction(false);
+      }
+      //---  copmprobador de resultados
+      if (this.indexProgresTasks == 10) {
+        if (this.numerodeBuenas >= 7) {
+          this.showGrats[0] = "right";
+          this.showGrats[1] = "false";
+        }
+        if (this.numerodeBuenas < 7) {
+          this.showGrats[1] = "wrong";
+          this.showGrats[0] = "false";
+        }
+        if(this.auto == true) this.autoPressed();
       }
     },
     autoPressed() {
       this.auto = !this.auto;
+      // verifica si hubo ronda activa antes
+      if (this.indexProgresTasks == 10 && this.auto == true) {
+        for (let i = 0; i < this.ProgresTasks.length; i++) {
+          this.ProgresTasks[i] = "false";
+        }
+        this.indexProgresTasks = 0;
+        this.numerodeBuenas = 0;
+        this.showGrats = ["false", "false"];
+      }
       // para cambiar estilo del boton
       let aux = this.pressedA;
       this.pressedA = this.emptyA;
@@ -402,7 +458,7 @@ export default {
       this.select[index] = !this.select[index];
       this.selected = index;
     },
-    romajiChecker(val){
+    romajiChecker(val) {
       if (val == false) {
         this.showRs = "hide";
         this.showRd = "";
@@ -410,12 +466,11 @@ export default {
         this.showRs = "";
         this.showRd = "hide";
       }
-    }
+    },
   },
   mounted() {
     this.asignIndex();
     this.romajiChecker(this.hidenRomaji);
-    
   },
   beforeUnmount() {
     clearInterval(this.interval);
